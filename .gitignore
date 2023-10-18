@@ -1,0 +1,6 @@
+config.json
+package-lock.json
+.vs/
+node_modules/
+dist/*.exe
+dist/*.json
