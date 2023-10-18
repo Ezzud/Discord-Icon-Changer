@@ -34,6 +34,7 @@
 > **1.** Download and Extract the [Source Code](https://github.com/Ezzud/Discord-Icon-Changer)<br>
 > **2.** Go to `src/assets/icons/`<br>
 > **3.** Add you own `.ico` file, the name in the program will be the file's name<br>
+> **4.** Launch the program or compile it again<br>
 
 
 
