@@ -4,3 +4,5 @@ package-lock.json
 node_modules/
 dist/*.exe
 dist/*.json
+assets/icons/*.webp
+assets/icons/*.png
