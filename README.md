@@ -1,6 +1,6 @@
 # ![image](https://github.com/Ezzud/Discord-Icon-Changer/assets/44119886/57eb02d5-d2eb-4dec-bb8b-0066ac9c1304) Discord Icon Changer
 ### Change your Desktop Discord Icon like on mobile!
-### Download [HERE](https://github.com/Ezzud/Discord-Icon-Changer/releases/download/1.0.0/DiscordIconChanger.exe)
+### Download [HERE](https://github.com/Ezzud/Discord-Icon-Changer/releases/download/1.0.1/DiscordIconChanger.exe)
 ### 📛 **ONLY AVAILABLE FOR WINDOWS** (for now...)
 <br><br>
   ***- This program will allow you to change your **Taskbar Icon** for Discord easily!***<br>
@@ -15,7 +15,7 @@
 
 
 ### How to use?
-> **1.** Download the latest Release of the Executable [HERE](https://github.com/Ezzud/Discord-Icon-Changer/releases/download/1.0.0/DiscordIconChanger.exe)<br>
+> **1.** Download the latest Release of the Executable [HERE](https://github.com/Ezzud/Discord-Icon-Changer/releases)<br>
 > - **IMPORTANT:** If you do not trust my executable, you can try to [launch without compiling](https://github.com/Ezzud/Discord-Icon-Changer/edit/master/README.md#how-to-launch-without-compilating) or [compilate it yourself](https://github.com/Ezzud/Discord-Icon-Changer/edit/master/README.md#how-to-compilate-the-project-yourself)<br>
 > 
 > **2.** Launch the executable<br><br>
