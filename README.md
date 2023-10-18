@@ -8,7 +8,7 @@
 
   **- ⚡ Detects automatically existing Discord Installations**<br>
   **- 🎃 Allows you to instantly change your icon**<br>
-  **- 🎈 Can change Installation easily**<br>
+  **- 🎈 Can change Discord Installation easily**<br>
   **- 👤 You can add your own icons to the existing ones!**<br>
   **- 🔧 Save your configuration, no need to launch the program everytime!**<br>
 
