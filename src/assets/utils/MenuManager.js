@@ -4,7 +4,22 @@ const Logger = require("./Logger");
 const Config = require("./ConfigManager");
 const assetsFolder = "./src/assets/icons/";
 const { exec } = require("child_process");
+const json = require('../../../package.json')
+const octokit = require('@octokit/request');
+const atob = require("atob");
+
 var icons;
+
+async function checkUpdates() {
+	let version = await octokit.request('GET /repos/Ezzud/Discord-Icon-Changer/contents/package.json');
+		version = atob(version.data.content);
+		version = JSON.parse(version).version;
+	if (version === json.version) {
+		Logger.success(`You are using the latest version (v\x1b[32m${json.version}\x1b[0m)\n`)
+	} else {
+		Logger.error(`Download the latest update (v\x1b[32m${version}\x1b[0m), you are using the v\x1b[33m${json.version}\x1b[0m\n`)
+	}
+}
 
 function resetTaskBar() {
 	exec("ie4uinit.exe -show", (error, stdout, stderr) => {})
@@ -51,6 +66,7 @@ async function applyIcon(iconSource, iconDestination) {
 async function clearConsole() {
 	console.clear();
 	console.log(`____________________________________________________________________________\n\n	██╗\n	██║\n	██║\n	██║\n	██║con Changer for Discord\n	╚═╝\n`)
+	Logger.info(`Version: \x1b[36mv${json.version}\x1b[0m`);
 	Logger.info(`Author: \x1b[36mhttps://github.com/Ezzud\x1b[0m`);
 	Logger.info(`Support: \x1b[36mhttps://discord.ezzud.fr\x1b[0m\n____________________________________________________________________________\n`);
 }
@@ -128,7 +144,8 @@ async function initMenu() {
 		}
 		if(workingApp === "error") return;
 	}
-	Logger.info(`Working App: ${workingApp.InstanceName} (${workingApp.DiscordRoot})\n`)
+	Logger.info(`Working App: ${workingApp.InstanceName} (${workingApp.DiscordRoot})`);
+	await checkUpdates();
 	await displayIcons();
 	console.log(`- Type \x1b[33ma number\x1b[0m to select your icon\n- Type \x1b[33m?\x1b[0m to change your working Discord installation\n- Type \x1b[33mX\x1b[0m to exit\n`)
 	await selectIcon(workingApp);

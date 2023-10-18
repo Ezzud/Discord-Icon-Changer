@@ -1,17 +1,19 @@
 {
   "name": "DiscordIconChanger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Change your Discord taskbar icon from one of the new Custom Icons for Mobile",
   "main": "src/index.js",
-  "output":"iconchanger.blob",
+  "output": "iconchanger.blob",
   "scripts": {
     "dev": "npm install && node .",
     "start": "node .",
-    "build":"nexe . -r src/**/**/* -o \"dist/DiscordIconChanger.exe\" --build"
+    "build": "nexe . -r src/**/**/* -o \"dist/DiscordIconChanger.exe\" --build"
   },
   "author": "ezzud",
   "license": "MIT",
   "dependencies": {
+    "@octokit/request": "^8.1.4",
+    "atob": "^2.1.2",
     "edit-json-file": "^1.7.0",
     "fs": "^0.0.1-security"
   }
