@@ -17,7 +17,7 @@ async function checkUpdates() {
 	if (version === json.version) {
 		Logger.success(`You are using the latest version (v\x1b[32m${json.version}\x1b[0m)\n`)
 	} else {
-		Logger.error(`Download the latest update (v\x1b[32m${version}\x1b[0m), you are using the v\x1b[33m${json.version}\x1b[0m\n`)
+		Logger.error(`Download the latest update (v\x1b[32m${version}\x1b[0m), you are using the v\x1b[33m${json.version}\x1b[0m (https://github.com/Ezzud/Discord-Icon-Changer)\n`)
 	}
 }
 
@@ -144,8 +144,9 @@ async function initMenu() {
 		}
 		if(workingApp === "error") return;
 	}
-	Logger.info(`Working App: ${workingApp.InstanceName} (${workingApp.DiscordRoot})`);
+	
 	await checkUpdates();
+	Logger.info(`Working App: ${workingApp.InstanceName} (${workingApp.DiscordRoot})`);
 	await displayIcons();
 	console.log(`- Type \x1b[33ma number\x1b[0m to select your icon\n- Type \x1b[33m?\x1b[0m to change your working Discord installation\n- Type \x1b[33mX\x1b[0m to exit\n`)
 	await selectIcon(workingApp);
