@@ -13,6 +13,7 @@ function resetTaskBar() {
 
 async function displayIcons() {
 	icons = await listDir(assetsFolder);
+	icons = icons.filter(x => x.endsWith(".ico"));
 
 	let finalText = "";
 	let counter = 0;
@@ -23,8 +24,8 @@ async function displayIcons() {
 		}
 		let selectedIcon = await Config.get("selected");
 		let fileName = icons[i].split(".")[0];
-		let fileLine = `[\x1b[33m${i+1}\x1b[0m] ${fileName}`;
-		let spaceCount = 35 - fileLine.length;
+		let fileLine = `[\x1b[33m${i+1}\x1b[0m] ${fileName.replaceAll("(Zoomed)", "(Zoom)")}`;
+		let spaceCount = 38 - fileLine.length;
 
 		if(selectedIcon === fileName) fileLine = `[\x1b[33m${i+1}\x1b[0m] \x1b[32m${fileName}\x1b[0m`;
 		if(fileName === "Default") fileLine = `[\x1b[33m${i+1}\x1b[0m] \x1b[36m${fileName}\x1b[0m`;
